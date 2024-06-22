@@ -1,0 +1,6 @@
+*.h5
+data/
+__pycache__/
+env/
+.DS_Store
+
