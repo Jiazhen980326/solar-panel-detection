@@ -4,14 +4,33 @@ The presence of dust, snow, bird droppings, and other debris on the surface of s
 
 The objective of this project is to evaluate the effectiveness of various machine learning classifiers in accurately detecting the presence of dust, snow, bird droppings, and other physical and electrical issues on solar panel surfaces. By identifying the best-performing classifiers, we aim to implement a reliable and efficient monitoring system that maximizes energy production and minimizes maintenance efforts.
 
-## 安装
+## Dataset
 
-说明如何安装和运行项目
+Dataset used is from: <https://www.kaggle.com/datasets/pythonafroz/solar-panel-images?resource=download>
 
+It contians 6 classes of the following:
+
+```
+Clean: This directory has images of clean solar panels
+Dusty: This directory has images of dusty solar panels
+Bird-drop: This directory has images of bird-drop on solar panels
+Electrical-damage: This directory has images of electrical-damage solar panels
+Physical-Damage: This directory has images of physical-damage solar panels
+Snow-Covered: This directory has images of snow-covered on solar panels
+
+```
+
+## Library installation
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Jiazhen980326/solar-panel-detection.git
+cd solar-panel-detection
 python -m venv env
-source env/bin/activate  # 在Windows上使用 .\env\Scripts\activate
+source env/bin/activate  # .\env\Scripts\activate
 pip install -r requirements.txt
+```
+
+## Note
+
+1. Apple chip acceleration:
+The latest Python supported tensorflow-metal is python==3.11. [ref](https://discuss.tensorflow.org/t/tensorflow-on-apple-m2/14804/3)

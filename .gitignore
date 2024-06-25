@@ -1,6 +1,9 @@
 *.h5
-data/
+*.keras
+data/*
 __pycache__/
 env/
 .DS_Store
 
+# Keep the following files
+!data/.gitkeep

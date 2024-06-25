@@ -5,14 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # 安装必要的包
-RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
-    make \
-    libhdf5-dev \
-    pkg-config \
-    libgl1 \
-    libglib2.0-0
+RUN apt-get update && apt-get install -y 
 
 # 复制项目文件到工作目录
 COPY . /app
