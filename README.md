@@ -30,6 +30,14 @@ source env/bin/activate  # .\env\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Usage instruction
+
+```bash
+python app.py 
+
+curl -X POST -F "file=@/Users/yusali/dev/solar-panel-detection/data/Dusty/Dust (18).jpg" http://127.0.0.1:5001/predict_file
+```
+
 ## Note
 
 1. Apple chip acceleration:
