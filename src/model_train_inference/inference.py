@@ -1,11 +1,7 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.saving import load_model
-from tensorflow.keras.preprocessing import image
+from keras.preprocessing import image
 from PIL import Image
-
-
-model = load_model("best_model.keras")
 
 
 def load_and_preprocess_image(img, mode="path", target_size=(244, 244)):
@@ -29,8 +25,8 @@ def load_and_preprocess_image(img, mode="path", target_size=(244, 244)):
     return img_array
 
 
-def inference(img_path, mode="path"):
-    img = load_and_preprocess_image(img_path, mode)
+def inference(img_path, model, mode="path"):
+    img = load_and_preprocess_image(img_path, mode=mode)
     logits = model.predict(img)
     cls_idx = np.argmax(logits)
 
