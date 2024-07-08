@@ -4,6 +4,10 @@ data/*
 __pycache__/
 env/
 .DS_Store
+model/*
 
 # Keep the following files
 !data/.gitkeep
+
+
+.env
