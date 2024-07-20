@@ -1,9 +1,17 @@
 from flask import Flask, request, jsonify
 from PIL import Image
-from inference import inference
+from src.model_train_inference.inference import inference
+import os
+import tensorflow as tf
 
 
 app = Flask(__name__)
+
+global model
+
+model_path = os.path.join("model/best_model.keras")
+# model_path = "model/best_model.keras"
+model = tf.keras.models.load_model(model_path)
 
 
 @app.route("/predict_file", methods=["POST"])
@@ -19,7 +27,7 @@ def predict():
 
     img = Image.open(file)
 
-    prediction = inference(img, mode="file")
+    prediction = inference(img, model=model, mode="file")
 
     # result = prediction[0].tolist()
     return jsonify({"predictions": prediction})
