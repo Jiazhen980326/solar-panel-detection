@@ -63,3 +63,9 @@ The latest Python supported tensorflow-metal is python==3.11. [ref](https://disc
 > * Base64 Encoded String: Useful when integrating with JSON-based APIs, where sending files is not convenient.
 > * Image URL: Convenient when images are hosted online and accessible via URLs.
 > * Raw Binary Data: Suitable for applications where images are sent as raw binary streams, such as in some IoT use cases.
+
+3. Further score.py script debugging techniques can be found at [Debugging scoring script with Azure Machine Learning inference HTTP server](<https://learn.microsoft.com/en-us/azure/machine-learning/how-to-inference-server-http?view=azureml-api-2#debug-your-scoring-script-locally>)
+
+4. The inference setup followed this page [Deploy and score a machine learning model by using an online endpoint](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-online-endpoints?view=azureml-api-2&tabs=python)
+
+[AML Example repo](https://github.com/Azure/azureml-examples/tree/main/cli/endpoints/online/managed)
